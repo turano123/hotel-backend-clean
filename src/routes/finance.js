@@ -3,6 +3,8 @@ import fetch from 'node-fetch';
 import { auth, requireRole } from '../middleware/auth.js';
 import { body, param, query, validationResult } from 'express-validator';
 import FinanceEntry from '../models/FinanceEntry.js';
+import fetch from "node-fetch";
+
 
 const router = express.Router();
 const ah = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
